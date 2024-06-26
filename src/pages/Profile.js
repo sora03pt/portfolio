@@ -1,12 +1,12 @@
 
 import './Profile.scss';
-import Main from '../image/main.jpg'
+import Profile from '../image/profile.jpg'
 
 function App() {
   return (
     <div className="profile">
       <div className='profile__wrap'>
-        <img src={Main} className="profile__image" alt="aura" width={200} />
+        <img src={Profile} className="profile__image" alt="" width={200} />
       </div>
       <div className='profile__box'>
         <h2 className='profile__title'>自己紹介</h2>

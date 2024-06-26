@@ -1,0 +1,21 @@
+.footer {
+  text-align: left;
+  background: #F4F1EB;
+  &__wrap {
+    padding: 40px;
+  }
+  &__title {
+    margin-bottom: 32px;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  &__label {
+    text-align: center;
+    color: #F4F1EB;
+    background: #535353;
+  }
+}

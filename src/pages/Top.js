@@ -1,6 +1,5 @@
 
 import './Top.scss';
-import Main from '../image/main.jpg'
 
 function App() {
   return (
