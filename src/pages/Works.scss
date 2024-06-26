@@ -1,0 +1,32 @@
+.top {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  &__wrap {
+    display: flex;
+    width: 60%;
+    height: 100vh;
+    padding: 0 40px;
+    justify-content: center;
+    align-items: center;
+    background: #F4F1EB;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-size: 80px;
+    font-weight: bold;
+  }
+  &__image {
+    width: 40%;
+    background: url(../image/main.jpg);
+    background-size: cover;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}
