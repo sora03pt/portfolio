@@ -2,9 +2,14 @@
 import { useState } from "react";
 
 import './Works2.scss';
-import works05 from '../image/works/05.jpg'
-import works5 from '../image/works/5.jpg'
-import works52 from '../image/works/5-2.jpg'
+import works01 from '../image/works/01.jpg'
+import works02 from '../image/works/02.jpg'
+import works03 from '../image/works/03.jpg'
+import works04 from '../image/works/04.jpg'
+import works1 from '../image/works/1.jpg'
+import works2 from '../image/works/2.jpg'
+import works3 from '../image/works/3.jpg'
+import works4 from '../image/works/4.jpg'
 
 import Modal from "react-modal";
 
@@ -28,28 +33,61 @@ function App() {
   };
 
   return (
-    <div className="works">
-      <div className="works__box" onClick={() => {
+    <div className="works2">
+      <div className="works2__box" onClick={() => {
           setEditModalIsOpen(true);
         }}>
-        <div className="works__wrap">
-          <h2 className="works__title">website</h2>
-          <img src={works05} alt="飲食店サイト" />
+        <div className="works2__wrap">
+          <img src={works01} alt="" />
         </div>
-        <div className="works__wrap--image">
-          <img src={works5} alt="" className="works__image" />
-          <img src={works52} alt="" className="works__image" />
+        <p className="works2__text">
+            学校の課題で作成<br/><br/>
+          <span className="works2__bold">制作期間</span>:3h（デザインのみ）<br/>
+          <span className="works2__bold">使用ツール</span>:Photoshop
+        </p>
+      </div>
+      <div className="works2__box" onClick={() => {
+          setEditModalIsOpen(true);
+        }}>
+        <div className="works2__wrap">
+          <img src={works02} alt="" />
         </div>
+        <p className="works2__text">
+            学校の課題で作成<br/><br/>
+          <span className="works2__bold">制作期間</span>:3h（デザインのみ）<br/>
+          <span className="works2__bold">使用ツール</span>:Photoshop
+        </p>
+      </div>
+      <div className="works2__box" onClick={() => {
+          setEditModalIsOpen(true);
+        }}>
+        <div className="works2__wrap">
+          <img src={works03} alt="" />
+        </div>
+        <p className="works2__text">
+            学校の課題で作成<br/><br/>
+          <span className="works2__bold">制作期間</span>:3h（デザインのみ）<br/>
+          <span className="works2__bold">使用ツール</span>:Photoshop
+        </p>
+      </div>
+      <div className="works2__box" onClick={() => {
+          setEditModalIsOpen(true);
+        }}>
+        <div className="works2__wrap">
+          <img src={works04} alt="" />
+        </div>
+        <p className="works2__text">
+            学校の課題で作成<br/><br/>
+          <span className="works2__bold">制作期間</span>:3h（デザインのみ）<br/>
+          <span className="works2__bold">使用ツール</span>:Photoshop
+        </p>
       </div>
       <Modal
         isOpen={editModalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}>
           <div className='modal'>
-            <div className='modal__wrap'>
-              <img src={works5} alt="" className="modal__image--pc" />
-              <img src={works52} alt="" className="modal__image--sp" />
-            </div>
+            <img src={works1} alt="" className="modal__image" />
           </div>
       </Modal>
     </div>
