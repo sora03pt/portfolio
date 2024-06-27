@@ -1,32 +1,63 @@
-.top {
-  display: flex;
+.works {
   width: 100%;
-  min-height: 100vh;
-  &__wrap {
+  &__box {
     display: flex;
-    width: 60%;
-    height: 100vh;
-    padding: 0 40px;
-    justify-content: center;
-    align-items: center;
-    background: #F4F1EB;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  &__wrap {
+    width: 50%;
     @media screen and (max-width: 767px) {
       width: 100%;
     }
-  }
-  &__text {
-    margin-bottom: 20px;
+    &--image {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
   }
   &__title {
-    font-size: 80px;
+    margin-bottom: 32px;
+    text-align: left;
+    font-size: 36px;
     font-weight: bold;
   }
   &__image {
-    width: 40%;
-    background: url(../image/main.jpg);
-    background-size: cover;
-    @media screen and (max-width: 767px) {
-      display: none;
+    width: 250px;
+    height: 500px;
+    object-fit: cover;
+    object-position: top center;
+  }
+  &__text {
+    margin-top: 10px;
+    text-align: left;
+  }
+  &__bold {
+    font-weight: bold;
+  }
+}
+
+.modal {
+  overflow-y: scroll;
+  &__wrap {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+  &__image {
+    &--pc {
+      width: 70%;
+    }
+    &--sp {
+      width: 30%;
     }
   }
+}
+
+.ReactModal__Content {
+  overscroll-behavior-y: contain;
 }
