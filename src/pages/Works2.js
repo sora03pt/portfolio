@@ -26,16 +26,31 @@ const customStyles = {
 };
 
 function App() {
-  const [editModalIsOpen, setEditModalIsOpen] = useState(false);
+  const [editModalIsOpen1, setEditModalIsOpen1] = useState(false);
+  const [editModalIsOpen2, setEditModalIsOpen2] = useState(false);
+  const [editModalIsOpen3, setEditModalIsOpen3] = useState(false);
+  const [editModalIsOpen4, setEditModalIsOpen4] = useState(false);
 
-  const closeModal = () => {
-    setEditModalIsOpen(false);
+  const closeModal1 = () => {
+    setEditModalIsOpen1(false);
+  };
+
+  const closeModal2 = () => {
+    setEditModalIsOpen2(false);
+  };
+
+  const closeModal3 = () => {
+    setEditModalIsOpen3(false);
+  };
+
+  const closeModal4 = () => {
+    setEditModalIsOpen4(false);
   };
 
   return (
     <div className="works2">
       <div className="works2__box" onClick={() => {
-          setEditModalIsOpen(true);
+          setEditModalIsOpen1(true);
         }}>
         <div className="works2__wrap">
           <img src={works01} alt="" />
@@ -47,7 +62,7 @@ function App() {
         </p>
       </div>
       <div className="works2__box" onClick={() => {
-          setEditModalIsOpen(true);
+          setEditModalIsOpen2(true);
         }}>
         <div className="works2__wrap">
           <img src={works02} alt="" />
@@ -58,8 +73,8 @@ function App() {
           <span className="works2__bold">使用ツール</span>:Photoshop
         </p>
       </div>
-      <div className="works2__box" onClick={() => {
-          setEditModalIsOpen(true);
+      <div className="works2__box"  onClick={() => {
+          setEditModalIsOpen3(true);
         }}>
         <div className="works2__wrap">
           <img src={works03} alt="" />
@@ -71,7 +86,7 @@ function App() {
         </p>
       </div>
       <div className="works2__box" onClick={() => {
-          setEditModalIsOpen(true);
+          setEditModalIsOpen4(true);
         }}>
         <div className="works2__wrap">
           <img src={works04} alt="" />
@@ -83,11 +98,35 @@ function App() {
         </p>
       </div>
       <Modal
-        isOpen={editModalIsOpen}
-        onRequestClose={closeModal}
+        isOpen={editModalIsOpen1}
+        onRequestClose={closeModal1}
         style={customStyles}>
           <div className='modal'>
             <img src={works1} alt="" className="modal__image" />
+          </div>
+      </Modal>
+      <Modal
+        isOpen={editModalIsOpen2}
+        onRequestClose={closeModal2}
+        style={customStyles}>
+          <div className='modal'>
+            <img src={works2} alt="" className="modal__image" />
+          </div>
+      </Modal>
+      <Modal
+        isOpen={editModalIsOpen3}
+        onRequestClose={closeModal3}
+        style={customStyles}>
+          <div className='modal'>
+            <img src={works3} alt="" className="modal__image" />
+          </div>
+      </Modal>
+      <Modal
+        isOpen={editModalIsOpen4}
+        onRequestClose={closeModal4}
+        style={customStyles}>
+          <div className='modal'>
+            <img src={works4} alt="" className="modal__image" />
           </div>
       </Modal>
     </div>
