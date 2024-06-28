@@ -6,6 +6,7 @@ import works01 from '../image/works/01.jpg'
 import works02 from '../image/works/02.jpg'
 import works03 from '../image/works/03.jpg'
 import works04 from '../image/works/04.jpg'
+import works06 from '../image/works/06.jpg'
 import works1 from '../image/works/1.jpg'
 import works2 from '../image/works/2.jpg'
 import works3 from '../image/works/3.jpg'
@@ -97,6 +98,16 @@ function App() {
           <span className="works2__bold">使用ツール</span>:Photoshop
         </p>
       </div>
+      <a href="https://aura0223.github.io/office/" className="works2__box" target="_blank">
+        <div className="works2__wrap">
+          <img src={works06} alt="サンプルサイト" />
+        </div>
+        <p className="works2__text">
+          Material UIを使用してサンプルサイトを作成してみました<br/><br/>
+          <span className="works2__bold">制作期間</span>:2日<br/>
+          <span className="works2__bold">使用ツール</span>:canva、VScode
+        </p>
+      </a>
       <Modal
         isOpen={editModalIsOpen1}
         onRequestClose={closeModal1}

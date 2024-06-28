@@ -1,13 +1,16 @@
 .works2 {
   display: flex;
   margin: 30px 30px 60px;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
   &__box {
     width: 25%;
     padding: 18px;
     box-sizing: border-box;
     cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
     @media screen and (max-width: 767px) {
       width: 50%;
     }
