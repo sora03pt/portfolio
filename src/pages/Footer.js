@@ -8,7 +8,7 @@ function App() {
     <div className="footer">
       <div className="footer__wrap">
         <h2 className="footer__title">Connect</h2>
-        <h3 className="footer__name">AURA</h3>
+        <h3 className="footer__name">MAYU</h3>
         <p className='footer__mail'>aurakamura@gmai.com</p>
         <a className="footer__icon" href="mailto:aurakamura@gmai.com">
           <img src={mail} alt="mail" width={30} height={30} />
@@ -17,7 +17,7 @@ function App() {
           <img src={github} alt="git" width={30} height={29} />
         </a>
       </div>
-      <div className="footer__label">&copy; AURA</div>
+      <div className="footer__label">&copy; MAYU</div>
     </div>
   );
 }
