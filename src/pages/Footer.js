@@ -9,8 +9,8 @@ function App() {
       <div className="footer__wrap">
         <h2 className="footer__title">Connect</h2>
         <h3 className="footer__name">MAYU</h3>
-        <p className='footer__mail'>aurakamura@gmai.com</p>
-        <a className="footer__icon" href="mailto:aurakamura@gmai.com">
+        <p className='footer__mail'>sora03pt@yahoo.co.jp</p>
+        <a className="footer__icon" href="mailto:sora03pt@yahoo.co.jp">
           <img src={mail} alt="mail" width={30} height={30} />
         </a>
         <a className="footer__icon" href="https://github.com/aura0223" target="_blank" rel="noopener">
