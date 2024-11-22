@@ -13,7 +13,7 @@ function App() {
         <a className="footer__icon" href="mailto:sora03pt@yahoo.co.jp">
           <img src={mail} alt="mail" width={30} height={30} />
         </a>
-        <a className="footer__icon" href="https://github.com/aura0223" target="_blank" rel="noopener">
+        <a className="footer__icon" href="https://github.com/sora03pt" target="_blank" rel="noopener noreferrer">
           <img src={github} alt="git" width={30} height={29} />
         </a>
       </div>
