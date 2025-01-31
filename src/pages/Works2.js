@@ -19,7 +19,7 @@ const customStyles = {
     left: "50%",
     right: "auto",
     bottom: "auto",
-    height: "90%",
+    height: "80%",
     width: "90%",
     transform: "translate(-50%, -50%)",
   },
