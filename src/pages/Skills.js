@@ -21,10 +21,10 @@ function App() {
         <p className="skills__text">実務経験2年以上</p>
         <h4 className="skills__name">TypeScript</h4>
         <p className="skills__text">実務経験1年以上</p>
-        <h3 className="skills__sub">使用経験のあるツール</h3>
+        <h3 className="skills__sub">利用可能ツール</h3>
         <ul className="skills__list">
           <li className="skills__name">GitHub</li>
-          <li className="skills__name">Adobe Photoshop/Illustrator</li>
+          <li className="skills__name">Adobe Photoshop</li>
           <li className="skills__name">Figma</li>
           <li className="skills__name">canva</li>
           <li className="skills__name">Slack</li>
