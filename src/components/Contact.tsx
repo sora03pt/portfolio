@@ -1,20 +1,29 @@
+import githubIcon from '../image/icon/github.svg';
+import emailIcon from '../image/icon/mail.svg';
+import Image from 'next/image';
+
 export default function Contact() {
   return (
   <section className="max-w-4xl mx-auto px-6 py-20 text-center">
     <h2 className="text-2xl font-semibold mb-6">Contact</h2>
     <div className="flex justify-center gap-16 text-gray-700">
-      <div className="flex flex-col items-center">
-        <span className="text-3xl">🐙</span>
+      <a href='https://github.com/sora03pt' target='_blank' className="flex flex-col items-center cursor-pointer">
+        <span className="text-3xl">
+          <Image src={githubIcon} alt="GitHub" width={24} height={24} />
+        </span>
         <p className="mt-2 text-sm">GitHub</p>
-    </div>
-    <div className="flex flex-col items-center">
-        <span className="text-3xl">𝕏</span>
-        <p className="mt-2 text-sm">Xnam</p>
-    </div>
-    <div className="flex flex-col items-center">
-        <span className="text-3xl">✉️</span>
+      </a>
+      <button
+        className="flex flex-col items-center cursor-pointer"
+        onClick={() => {
+          window.location.href = 'mailto:sora0223pt-abcd@yahoo.co.jp';
+        }}
+      >
+        <span className="text-3xl">
+          <Image src={emailIcon} alt="Email" width={24} height={24} />
+        </span>
         <p className="mt-2 text-sm">Email</p>
-      </div>
+      </button>
     </div>
   </section>
   );

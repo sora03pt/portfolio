@@ -8,7 +8,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "@mui/icons-material": "^7.3.4",
