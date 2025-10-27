@@ -1,5 +1,3 @@
-import githubIcon from '../image/icon/github.svg';
-import emailIcon from '../image/icon/mail.svg';
 import Image from 'next/image';
 
 export default function Contact() {
@@ -9,7 +7,7 @@ export default function Contact() {
     <div className="flex justify-center gap-16 text-gray-700">
       <a href='https://github.com/sora03pt' target='_blank' className="flex flex-col items-center cursor-pointer">
         <span className="text-3xl">
-          <Image src={githubIcon} alt="GitHub" width={24} height={24} />
+          <Image src="/image/icon/github.svg" alt="GitHub" width={24} height={24} />
         </span>
         <p className="mt-2 text-sm">GitHub</p>
       </a>
@@ -20,7 +18,7 @@ export default function Contact() {
         }}
       >
         <span className="text-3xl">
-          <Image src={emailIcon} alt="Email" width={24} height={24} />
+          <Image src="/image/icon/mail.svg" alt="Email" width={24} height={24} />
         </span>
         <p className="mt-2 text-sm">Email</p>
       </button>
