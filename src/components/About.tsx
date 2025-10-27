@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function About() {
 return (
-  <section className="relative max-w-6xl px-6 md:flex items-center gap-10 py-20 mx-5 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
+  <section className="relative md:flex items-center gap-10 bg-white rounded-3xl shadow-xl border border-gray-200 max-w-6xl mx-auto px-6 py-20">
     <div className="flex-1 relative z-10">
       <h2 className="text-3xl font-extrabold mb-6 text-gray-800 flex items-center gap-2">
         <span className="inline-block w-2 h-6 bg-gray-400 rounded-full mr-2"></span>
