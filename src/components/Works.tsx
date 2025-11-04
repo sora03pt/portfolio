@@ -7,39 +7,39 @@ const projects = [
 		desc: "v0を使って実装",
 		github: "https://github.com/sora03pt/cosplay-recruitment",
 		demo: "https://sora03pt.github.io/cosplay-recruitment/",
-        image: '/image/works/01.jpg',
+        image: '/portfolio/image/works/01.jpg',
 	},
 	{
 		title: "Project Two",
 		desc: "insore adan canarst",
 		github: "https://github.com/example/project-two",
 		demo: "https://example.com/project-two",
-        image: '/image/works/02.jpg',
+        image: '/portfolio/image/works/02.jpg',
 	},
 	{
 		title: "Project Three",
 		desc: "Madhedwclleedine",
 		github: "https://github.com/example/project-three",
 		demo: "https://example.com/project-three",
-        image: '/image/works/03.jpg',
+        image: '/portfolio/image/works/03.jpg',
 	},
 ];
 
 const photos = [
 	{
-		image: '/image/works/photo/01.jpg',
+		image: '/portfolio/image/works/photo/01.jpg',
 		alt: '',
 	},
 	{
-		image: '/image/works/photo/02.jpg',
+		image: '/portfolio/image/works/photo/02.jpg',
 		alt: '',
 	},
 	{
-		image: '/image/works/photo/03.jpg',
+		image: '/portfolio/image/works/photo/03.jpg',
 		alt: '',
 	},
 	{
-		image: '/image/works/photo/05.jpg',
+		image: '/portfolio/image/works/photo/05.jpg',
 		alt: '',
 	},
 ];
