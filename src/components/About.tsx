@@ -23,7 +23,7 @@ return (
     <div className="mt-12 md:mt-0 flex justify-center items-center relative z-10">
       <div className="w-50 h-50 rounded-full overflow-hidden shadow-lg border-4 border-white">
         <Image
-          src="/image/profile.jpg"
+          src="/portfolio/image/profile.jpg"
           alt="Profile"
           width={200}
           height={200}
