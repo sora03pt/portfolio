@@ -1,6 +1,12 @@
+
 import Image from 'next/image';
+import styles from './Works.module.scss';
+import { useState } from 'react';
+import ImageModal from './ImageModal';
 
 export default function Works() {
+	const [modalOpen, setModalOpen] = useState(false);
+	const [modalSrc, setModalSrc] = useState('');
 const projects = [
 	{
 		title: "文章作成支援ツール(SP向け)",
@@ -50,18 +56,18 @@ return (
     <h3 className="text-1xl font-semibold mb-4">Web</h3>
     <div className="grid md:grid-cols-3 gap-6 mb-16">
         {projects.map((p, i) => (
-        <div
-            key={i}
-            className="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition"
-            >
+		<div
+			key={i}
+			className={`bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm transition ${styles.card}`}
+		>
             <div className="h-32 rounded-xl mb-4">
-                <Image
-                    src={p.image}
-                    alt="Project Image"
-                    width={128}
-                    height={128}
-                    className="object-contain w-full h-full rounded-xl"
-                />
+				<Image
+					src={p.image}
+					alt="Project Image"
+					width={128}
+					height={128}
+					className="object-contain w-full h-full rounded-xl"
+				/>
             </div>
             <h3 className="font-semibold">{p.title}</h3>
             <p className="text-sm text-gray-600 mt-1">{p.desc}</p>
@@ -87,17 +93,26 @@ return (
         ))}
     </div>
 		<h3 className="text-1xl font-semibold mb-4">Photo</h3>
-		<div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm flex center flex-wrap gap-7">
+		<div className={`bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm ${styles.images}`}>
 		{photos.map((photo, i) => (
-				<Image
-					key={i}
+			<button
+				key={i}
+				type='button'
+				className={styles.button}
+				onClick={() => {
+				  setModalSrc(photo.image);
+				  setModalOpen(true);
+				}}
+			>
+				<img
 					src={photo.image}
 					alt={photo.alt}
-					width={240}
-					height={160}
-					className="object-contain rounded-xl"
+					height={360}
+					className={styles.item}
 				/>
-			))}
+			</button>
+		))}
+		<ImageModal src={modalSrc} open={modalOpen} onClose={() => setModalOpen(false)} />
 		</div>
 </section>
 );

@@ -14,7 +14,7 @@ return (
       </p>
       <div className="flex flex-wrap gap-3 mt-4">
         {["HTML", "CSS", "JS", "TS", "React", "Next.js", "Vue.js", "Photoshop"].map((skill) => (
-          <span key={skill} className="px-4 py-1 bg-gray-100 text-gray-700 border border-gray-300 rounded-full text-sm font-semibold shadow hover:bg-gray-200 transition">
+          <span key={skill} className="px-4 py-1 bg-gray-100 text-gray-700 border border-gray-300 rounded-full text-sm font-semibold shadow">
             {skill}
           </span>
         ))}

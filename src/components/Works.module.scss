@@ -1,0 +1,24 @@
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.button {
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  width: calc(25% - 20px);
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    width: calc(50% - 10px);
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.item {
+  border-radius: 1em;
+}
