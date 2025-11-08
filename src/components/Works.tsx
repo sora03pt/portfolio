@@ -15,20 +15,6 @@ const projects = [
 		demo: "https://sora03pt.github.io/cosplay-recruitment/",
         image: '/portfolio/image/works/01.jpg',
 	},
-	{
-		title: "Project Two",
-		desc: "insore adan canarst",
-		github: "https://github.com/example/project-two",
-		demo: "https://example.com/project-two",
-        image: '/portfolio/image/works/02.jpg',
-	},
-	{
-		title: "Project Three",
-		desc: "Madhedwclleedine",
-		github: "https://github.com/example/project-three",
-		demo: "https://example.com/project-three",
-        image: '/portfolio/image/works/03.jpg',
-	},
 ];
 
 const designs = [
@@ -43,6 +29,10 @@ const designs = [
 	{
 		image: '/portfolio/image/works/design/03.jpg',
 		title: '夏期講習バナー',
+	},
+	{
+		image: '/portfolio/image/works/design/04.jpg',
+		title: 'コーヒーサブスクリプションバナー',
 	},
 ];
 
