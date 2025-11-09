@@ -10,11 +10,13 @@ return (
           About
         </h2>
         <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-6">
-          <span className="text-gray-500">フロントエンド開発を中心に、見た目だけでなく使いやすさにもこだわった実装を行っています。<br />
-          現在はデザイン面からもアプローチできるよう、UI/UXデザインを学んでいます。</span>
+          <span className="text-gray-500">2017年 美術系大学を卒業し、2年間Webデザインを担当していました。現在はフロントエンド開発を中心に担当しています。<br />
+            見た目だけでなく、ユーザビリティにこだわった実装を得意とし、Lighthouseを活用したSEO対策や、アクセシビリティに配慮したコーディングを心がけています。<br />
+            今後はデザイン面からもアプローチするため、UI/UXデザインを深く学び、スキルアップに努めています。</span>
         </p>
+        <h3 className="text-2xl font-semibold mt-10">Skills</h3>
         <div className="flex flex-wrap gap-3 mt-4">
-          {["HTML", "CSS", "JS", "TS", "React", "Next.js", "Vue.js", "Photoshop"].map((skill) => (
+          {["HTML", "CSS", "JS", "TS", "React", "Next.js", "Vue.js", "Photoshop", "Canva", "a11y", "Lighthouse"].map((skill) => (
             <span key={skill} className="px-4 py-1 bg-gray-100 text-gray-700 border border-gray-400 rounded-full text-sm font-semibold shadow">
               {skill}
             </span>

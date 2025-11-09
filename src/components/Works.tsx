@@ -9,8 +9,8 @@ export default function Works() {
 	const [modalSrc, setModalSrc] = useState('');
 const projects = [
 	{
-		title: "文章作成支援ツール(SP向け)",
-		desc: "任意の値をセットして撮影会の募集文章を簡単に作成できるツール",
+		title: "文章作成支援ツール",
+		desc: "使用ツール：Vercel v0\n言語：TypeScript、HTML、CSS\n時間：2h",
 		github: "https://github.com/sora03pt/cosplay-recruitment",
 		demo: "https://sora03pt.github.io/cosplay-recruitment/",
         image: '/portfolio/image/works/01.jpg',
@@ -19,20 +19,29 @@ const projects = [
 
 const designs = [
 	{
-		image: '/portfolio/image/works/design/01.jpg',
-		title: '名刺',
-	},
-	{
-		image: '/portfolio/image/works/design/02.jpg',
-		title: '英会話スクールバナー',
-	},
-	{
 		image: '/portfolio/image/works/design/03.jpg',
 		title: '夏期講習バナー',
+		desc: '使用ツール：canva\n時間：2h',
 	},
 	{
 		image: '/portfolio/image/works/design/04.jpg',
 		title: 'コーヒーサブスクリプションバナー',
+		desc: '使用ツール：canva\n時間：2h',
+	},
+	{
+		image: '/portfolio/image/works/design/05.jpg',
+		title: '水道工事会社バナー',
+		desc: '使用ツール：canva\n時間：2h',
+	},
+		{
+		image: '/portfolio/image/works/design/01.jpg',
+		title: '名刺',
+		desc: '使用ツール：Adobe Illustrator\n時間：3h',
+	},
+	{
+		image: '/portfolio/image/works/design/02.jpg',
+		title: '英会話スクールバナー',
+		desc: '使用ツール：canva\n時間：2h',
 	},
 ];
 
@@ -73,7 +82,7 @@ return (
 				</a>
             </div>
             <h4 className="font-semibold">{p.title}</h4>
-            <p className="text-sm text-gray-600 mt-1">{p.desc}</p>
+            <p className="text-sm text-gray-600 mt-1 whitespace-pre-line">{p.desc}</p>
             <div className="flex gap-2 mt-4">
                 <a
                     href={p.github}
@@ -114,6 +123,7 @@ return (
 					className={styles.item}
 				/>
 				<h4 className="font-semibold mt-3 text-left">{design.title}</h4>
+				<p className="text-sm text-gray-600 mt-1 whitespace-pre-line text-left">{design.desc}</p>
 			</button>
 		))}
 		<ImageModal src={modalSrc} open={modalOpen} onClose={() => setModalOpen(false)} />
@@ -125,6 +135,7 @@ return (
 				key={i}
 				type='button'
 				className={styles.button}
+				aria-label="Open image modal"
 				onClick={() => {
 					setModalSrc(photo.image);
 					setModalOpen(true);
