@@ -33,15 +33,20 @@ const designs = [
 		title: '水道工事会社バナー',
 		desc: '使用ツール：canva\n時間：2h',
 	},
-		{
-		image: '/portfolio/image/works/design/01.jpg',
-		title: '名刺',
-		desc: '使用ツール：Adobe Illustrator\n時間：3h',
+	{
+		image: '/portfolio/image/works/design/06.jpg',
+		title: '運送会社求人バナー',
+		desc: '使用ツール：canva\n時間：2h',
 	},
 	{
 		image: '/portfolio/image/works/design/02.jpg',
 		title: '英会話スクールバナー',
 		desc: '使用ツール：canva\n時間：2h',
+	},
+		{
+		image: '/portfolio/image/works/design/01.jpg',
+		title: '名刺',
+		desc: '使用ツール：Adobe Illustrator\n時間：3h',
 	},
 ];
 
