@@ -24,12 +24,12 @@ return (
         </div>
       </div>
       <div className="mt-12 md:mt-0 flex justify-center items-center relative z-10">
-        <div className="w-50 h-50 rounded-full overflow-hidden shadow-lg border-4 border-white">
+        <div className="w-100 h-100 rounded-full overflow-hidden shadow-lg border-4 border-white">
           <Image
             src="/portfolio/image/profile.jpg"
             alt="Profile"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             className="object-cover w-full h-full"
           />
         </div>
