@@ -9,9 +9,9 @@ export default function Home() {
     return (
     <>
     <Head>
-        <title>ポートフォリオ | MAYU NAKAMURA</title>
-        <meta name="description" content="MAYU NAKAMURAのポートフォリオサイト" />
-        <meta property="og:title" content="ポートフォリオ | MAYU NAKAMURA" />
+        <title>ポートフォリオ | WebCraft Lab</title>
+        <meta name="description" content="ポートフォリオサイト" />
+        <meta property="og:title" content="ポートフォリオ | WebCraft Lab" />
     </Head>
     <main>
         <Hero />
