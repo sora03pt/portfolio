@@ -42,6 +42,11 @@ const designs = [
 		image: '/portfolio/image/works/design/02.jpg',
 		title: '英会話スクールバナー',
 		desc: '使用ツール：canva\n時間：2h',
+	},
+	{
+		image: '/portfolio/image/works/design/07.jpg',
+		title: 'LINE友達登録バナー',
+		desc: '使用ツール：canva\n時間：2h',
 	}
 ];
 
