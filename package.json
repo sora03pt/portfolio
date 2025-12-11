@@ -11,14 +11,14 @@
     "deploy": "gh-pages -d docs"
   },
   "dependencies": {
-    "@mui/icons-material": "^7.3.4",
+    "@mui/icons-material": "^7.3.6",
     "@mui/material": "^7.3.4",
     "@tailwindcss/postcss": "^4.1.16",
     "@tailwindcss/vite": "^4.1.16",
-    "next": "^16.0.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "sass": "^1.93.2"
+    "next": "^16.0.8",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "sass": "^1.96.0"
   },
   "browserslist": {
     "production": [
