@@ -1,8 +1,6 @@
-import Image from 'next/image';
-
 export default function About() {
 return (
-  <section className="max-w-6xl mx-auto px-6 py-20">
+  <section id="About" className="max-w-6xl mx-auto px-6 py-20">
     <div className="relative md:flex items-center gap-10 bg-gray-50 rounded-2xl shadow-sm border border-gray-600 max-w-6xl mx-auto px-6 py-10">
       <div className="flex-1 relative z-10">
         <h2 className="text-3xl font-extrabold mb-6 text-gray-800 flex items-center gap-2">
