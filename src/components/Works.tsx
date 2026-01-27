@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './Works.module.scss';
 import { useState } from 'react';
 import ImageModal from './ImageModal';
@@ -98,10 +97,9 @@ export default function Works() {
                             >
                                 <div className="h-32 rounded-xl mb-4">
                                     <a href={p.demo} target="_blank" rel="noopener noreferrer">
-                                        <Image
+                                        <img
                                             src={p.image}
                                             alt="Project Image"
-                                            width={128}
                                             height={128}
                                             className="object-cover w-full h-full rounded-xl"
                                         />
