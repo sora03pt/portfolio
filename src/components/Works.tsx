@@ -103,7 +103,7 @@ export default function Works() {
                                             alt="Project Image"
                                             width={128}
                                             height={128}
-                                            className="object-contain w-full h-full rounded-xl"
+                                            className="object-cover w-full h-full rounded-xl"
                                         />
                                     </a>
                                 </div>
