@@ -59,11 +59,11 @@ export default function Works() {
     ];
 
     return (
-        <section id="works" className="max-w-6xl mx-auto px-6 py-20">
-            <h2 className="text-2xl font-semibold mb-4">Works</h2>
+        <section id="works" className={styles.section}>
+            <h2 className={styles.title}>Works</h2>
 
             {/* フィルタボタン */}
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className={styles.filterGroup}>
                 {[
                     { key: 'all', label: 'All' },
                     { key: 'web', label: 'Web' },
@@ -75,10 +75,7 @@ export default function Works() {
                         type="button"
                         aria-pressed={filter === (btn.key as any)}
                         onClick={() => setFilter(btn.key as any)}
-                        className={`px-3 py-1 rounded-full text-sm font-medium transition ${filter === (btn.key as any)
-                            ? 'bg-gray-800 text-white'
-                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                            }`}
+                        className={`${styles.filterButton} ${filter === (btn.key as any) ? styles.active : ''}`}
                     >
                         {btn.label}
                     </button>
@@ -88,30 +85,30 @@ export default function Works() {
             {/* Web */}
             {(filter === 'all' || filter === 'web') && (
                 <>
-                    <h3 className="text-1xl font-semibold mb-4">Web</h3>
-                    <div className="grid md:grid-cols-3 gap-6 mb-16">
+                    <h3 className={styles.sectionHeading}>Web</h3>
+                    <div className={styles.grid}>
                         {projects.map((p, i) => (
                             <div
                                 key={i}
-                                className={`bg-gray-50 rounded-2xl p-6 border border-gray-600 shadow-sm transition ${styles.card}`}
+                                className={styles.card}
                             >
-                                <div className="h-32 rounded-xl mb-4">
+                                <div className={styles.mediaWrap}>
                                     <a href={p.demo} target="_blank" rel="noopener noreferrer">
                                         <img
                                             src={p.image}
                                             alt="Project Image"
                                             height={128}
-                                            className="object-cover w-full h-full rounded-xl"
+                                            className={styles.projectImage}
                                         />
                                     </a>
                                 </div>
-                                <h4 className="font-semibold">{p.title}</h4>
-                                <div className="flex gap-2 mt-4">
+                                <h4 className={styles.projectTitle}>{p.title}</h4>
+                                <div className={styles.linkButtons}>
                                     <a
                                         href={p.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="px-3 py-1 text-sm bg-gray-100 rounded-lg hover:bg-gray-200 transition"
+                                        className={styles.linkButton}
                                     >
                                         GitHub
                                     </a>
@@ -119,7 +116,7 @@ export default function Works() {
                                         href={p.demo}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="px-3 py-1 text-sm bg-gray-100 rounded-lg hover:bg-gray-200 transition"
+                                        className={styles.linkButton}
                                     >
                                         Demo
                                     </a>
@@ -133,13 +130,13 @@ export default function Works() {
             {/* Design */}
             {(filter === 'all' || filter === 'design') && (
                 <>
-                    <h3 className="text-1xl font-semibold mb-4">Design</h3>
-                    <div className="grid md:grid-cols-3 gap-6 mb-16">
+                    <h3 className={styles.sectionHeading}>Design</h3>
+                    <div className={styles.grid}>
                         {designs.map((design, i) => (
                             <button
                                 key={i}
                                 type='button'
-                                className={`bg-gray-50 rounded-2xl p-6 border border-gray-600 shadow-sm transition cursor-pointer ${styles.card}`}
+                                className={`${styles.card} ${styles.clickable}`}
                                 onClick={() => {
                                     setModalSrc(design.image);
                                     setModalOpen(true);
@@ -151,7 +148,7 @@ export default function Works() {
                                     height={360}
                                     className={styles.item}
                                 />
-                                <h4 className="font-semibold mt-3 text-left">{design.title}</h4>
+                                <h4 className={`${styles.projectTitle} ${styles.leftTitle}`}>{design.title}</h4>
                             </button>
                         ))}
                     </div>
@@ -161,8 +158,8 @@ export default function Works() {
             {/* Photo */}
             {(filter === 'all' || filter === 'photo') && (
                 <>
-                    <h3 className="text-1xl font-semibold mb-4">Photo</h3>
-                    <div className={`bg-gray-50 rounded-2xl p-6 border border-gray-600 shadow-sm ${styles.images}`}>
+                    <h3 className={styles.sectionHeading}>Photo</h3>
+                    <div className={styles.photoWrap}>
                         {photos.map((photo, i) => (
                             <button
                                 key={i}
