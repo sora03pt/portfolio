@@ -2,24 +2,13 @@ import styles from './Works.module.scss';
 import { useState } from 'react';
 import ImageModal from './ImageModal';
 
-type FilterKey = 'all' | 'web' | 'design' | 'photo';
+type FilterKey = 'all' | 'design' | 'photo';
 
 export default function Works() {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalSrc, setModalSrc] = useState('');
     const [modalAlt, setModalAlt] = useState('');
     const [filter, setFilter] = useState<FilterKey>('all');
-
-    const projects = [
-        {
-            title: "アクセサリーECサイト",
-            description: "HTML / CSS / JavaScriptで作成したアクセサリーECサイト。商品一覧、詳細ページへの導線、レスポンシブ表示を実装。",
-            tags: ["HTML", "CSS", "JavaScript", "Responsive"],
-            github: "https://github.com/sora03pt/accessoryShop",
-            demo: "https://sora03pt.github.io/accessoryShop/",
-            image: '/portfolio/image/works/01.jpg',
-        },
-    ];
 
     const designs = [
         {
@@ -74,8 +63,7 @@ export default function Works() {
     ];
 
     const filters: { key: FilterKey; label: string; count: number }[] = [
-        { key: 'all', label: 'All', count: projects.length + designs.length + photos.length },
-        { key: 'web', label: 'Web', count: projects.length },
+        { key: 'all', label: 'All', count: designs.length + photos.length },
         { key: 'design', label: 'Banner', count: designs.length },
         { key: 'photo', label: 'Photo', count: photos.length },
     ];
@@ -85,7 +73,7 @@ export default function Works() {
             <div className={styles.header}>
                 <h2 className={styles.title}>Works</h2>
                 <p className={styles.description}>
-                    Web、バナー、写真の制作物を掲載しています。
+                    バナー、写真の制作物を掲載しています。
                 </p>
             </div>
 
@@ -103,60 +91,6 @@ export default function Works() {
                     </button>
                 ))}
             </div>
-
-            {(filter === 'all' || filter === 'web') && (
-                <div className={styles.categoryBlock}>
-                    <div className={styles.categoryHeader}>
-                        <h3 className={styles.sectionHeading}>Web</h3>
-                        <p>実装したWebサイト / アプリケーション。</p>
-                    </div>
-                    <div className={styles.grid}>
-                        {projects.map((p, i) => (
-                            <div
-                                key={i}
-                                className={styles.card}
-                            >
-                                <div className={styles.mediaWrap}>
-                                    <a href={p.demo} target="_blank" rel="noopener noreferrer">
-                                        <img
-                                            src={p.image}
-                                            alt={`${p.title}の画面キャプチャ`}
-                                            className={styles.projectImage}
-                                        />
-                                    </a>
-                                </div>
-                                <div className={styles.cardBody}>
-                                    <h4 className={styles.projectTitle}>{p.title}</h4>
-                                    <p className={styles.projectDescription}>{p.description}</p>
-                                    <div className={styles.tags}>
-                                        {p.tags.map((tag) => (
-                                            <span key={tag}>{tag}</span>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className={styles.linkButtons}>
-                                    <a
-                                        href={p.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={styles.linkButton}
-                                    >
-                                        GitHub
-                                    </a>
-                                    <a
-                                        href={p.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={styles.linkButton}
-                                    >
-                                        Demo
-                                    </a>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
 
             {(filter === 'all' || filter === 'design') && (
                 <div className={styles.categoryBlock}>
