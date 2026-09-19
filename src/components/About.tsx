@@ -1,23 +1,45 @@
 import styles from './About.module.scss';
 
 export default function About() {
+  const profile = [
+    '美術系大学卒',
+    'Webデザイナーとして2年勤務',
+    '現在はWeb制作 / フロントエンド開発を中心に制作',
+  ];
+
+  const skills = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'Vue.js',
+    'Storybook',
+    'Playwright',
+    'Accessibility',
+    'UI実装',
+    'Lighthouse',
+  ];
+
   return (
     <section id="About" className={styles.section}>
-      <div className={styles.card}>
-        <div className={styles.inner}>
-          <h2 className={styles.title}>
-            <span className={styles.decoration}></span>
-            About
-          </h2>
-          <p className={styles.paragraph}>
-            <span>
-              美術系大学卒。Webデザイナーとして2年間経験を積んだ後、フロントエンド開発へと領域を広げました。<br />
-              デザインと実装の両視点から、ユーザビリティとアクセシビリティを重視したWeb制作を行っています。
-            </span>
-          </p>
+      <div className={styles.header}>
+        <h2 className={styles.title}>About</h2>
+      </div>
+      <div className={styles.layout}>
+        <div>
+          <h3 className={styles.subtitle}>Profile</h3>
+          <ul className={styles.list}>
+            {profile.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
           <h3 className={styles.subtitle}>Skills</h3>
           <div className={styles.skills}>
-            {["HTML", "CSS", "JS", "TS", "React", "Next.js", "Vue.js", "Photoshop", "Canva", "a11y", "Lighthouse"].map((skill) => (
+            {skills.map((skill) => (
               <span key={skill} className={styles.skillTag}>
                 {skill}
               </span>
