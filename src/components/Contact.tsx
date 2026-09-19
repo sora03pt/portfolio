@@ -1,28 +1,31 @@
-import Image from 'next/image';
 import styles from './Contact.module.scss';
 
 export default function Contact() {
   return (
-    <section className={styles.section}>
-      <h2 className={styles.title}>Contact</h2>
+    <section id="contact" className={styles.section}>
+      <h2 className={styles.title}>Links</h2>
       <div className={styles.links}>
-        <a href='https://github.com/sora03pt' target='_blank' className={styles.contactItem}>
+        <a href='https://github.com/sora03pt' target='_blank' rel="noopener noreferrer" className={styles.contactItem}>
           <span className={styles.iconWrap}>
-            <Image src="/portfolio/image/icon/github.svg" alt="" width={24} height={24} />
+            <img src="/portfolio/image/icon/github.svg" alt="" width={24} height={24} />
           </span>
-          <p className={styles.label}>GitHub</p>
+          <span>
+            <strong>GitHub</strong>
+            <small>sora03pt</small>
+          </span>
         </a>
-        <button
+        <a
+          href="mailto:sora0223pt-abcd@yahoo.co.jp"
           className={styles.contactItem}
-          onClick={() => {
-            window.location.href = 'mailto:sora0223pt-abcd@yahoo.co.jp';
-          }}
         >
           <span className={styles.iconWrap}>
-            <Image src="/portfolio/image/icon/mail.svg" alt="" width={24} height={24} />
+            <img src="/portfolio/image/icon/mail.svg" alt="" width={24} height={24} />
           </span>
-          <p className={styles.label}>Email</p>
-        </button>
+          <span>
+            <strong>Email</strong>
+            <small>sora0223pt-abcd@yahoo.co.jp</small>
+          </span>
+        </a>
       </div>
     </section>
   );
