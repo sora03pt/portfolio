@@ -30,6 +30,9 @@ export default function About() {
       <div className={styles.layout}>
         <div>
           <h3 className={styles.subtitle}>Profile</h3>
+          <div className={styles.profileIntro}>
+            <p className={styles.name}>MAYU NAKAMURA</p>
+          </div>
           <ul className={styles.list}>
             {profile.map((item) => (
               <li key={item}>{item}</li>
