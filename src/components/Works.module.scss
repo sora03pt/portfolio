@@ -90,6 +90,12 @@
   gap: 1.25rem;
 }
 
+.appGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -233,6 +239,7 @@
 }
 
 @media (max-width: 900px) {
+  .appGrid,
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -262,6 +269,10 @@
   }
 
   .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .appGrid {
     grid-template-columns: 1fr;
   }
 

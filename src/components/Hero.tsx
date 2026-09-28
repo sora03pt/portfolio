@@ -49,7 +49,6 @@ export default function Hero() {
 
       <div className={styles.content}>
         <h1 className={styles.title}>WebCraft Lab</h1>
-        <p className={styles.role}>Frontend Engineer</p>
         <p className={styles.subtitle}>
           React / Next.js / TypeScriptを中心に、Webフロントエンドの実装をしています。
         </p>
