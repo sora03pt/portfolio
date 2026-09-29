@@ -161,9 +161,13 @@ export default function Works() {
                                             href={app.storybook}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className={styles.linkButton}
+                                            className={styles.storybookLink}
                                         >
-                                            Storybook
+                                            <span className={styles.storybookLabel}>Design System</span>
+                                            <span className={styles.storybookTitle}>
+                                                Storybookを見る
+                                                <span aria-hidden="true">↗</span>
+                                            </span>
                                         </a>
                                     )}
                                 </div>
