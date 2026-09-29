@@ -175,6 +175,7 @@
 
 .linkButtons {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: auto;
   padding: 1rem;
@@ -196,6 +197,46 @@
 
 .linkButton:hover {
   background: #f3f4f6;
+}
+
+.storybookLink {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.5rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #8796a8;
+  border-radius: 0.35rem;
+  background: #f1f5f8;
+  color: var(--color-ink);
+}
+
+.storybookLabel {
+  color: #596b7d;
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.storybookTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
+.storybookLink:hover {
+  background: #e5edf3;
+  border-color: #596b7d;
+}
+
+.storybookLink:focus-visible {
+  outline: 3px solid #596b7d;
+  outline-offset: 2px;
 }
 
 .clickable {

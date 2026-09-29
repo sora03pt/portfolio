@@ -11,8 +11,6 @@
     "deploy": "npm run build && gh-pages -d out --dotfiles"
   },
   "dependencies": {
-    "@mui/icons-material": "^7.3.6",
-    "@mui/material": "^7.3.4",
     "next": "^16.0.8",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",

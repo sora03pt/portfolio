@@ -18,6 +18,7 @@ export default function Works() {
             tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
             demo: 'https://doujin-treasure-map.vercel.app/',
             github: 'https://github.com/sora03pt/doujin-treasure-map',
+            storybook: null,
         },
         {
             image: '/portfolio/image/works/apps/wishlist.png',
@@ -26,6 +27,7 @@ export default function Works() {
             tags: ['Next.js', 'Supabase', 'Storybook', 'Playwright'],
             demo: 'https://my-web-app-lemon-ten.vercel.app/',
             github: 'https://github.com/sora03pt/wishlist-app',
+            storybook: 'https://sora03pt.github.io/wishlist-app/',
         },
     ];
 
@@ -154,6 +156,20 @@ export default function Works() {
                                     >
                                         GitHub
                                     </a>
+                                    {app.storybook && (
+                                        <a
+                                            href={app.storybook}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className={styles.storybookLink}
+                                        >
+                                            <span className={styles.storybookLabel}>Design System</span>
+                                            <span className={styles.storybookTitle}>
+                                                Storybookを見る
+                                                <span aria-hidden="true">↗</span>
+                                            </span>
+                                        </a>
+                                    )}
                                 </div>
                             </article>
                         ))}
