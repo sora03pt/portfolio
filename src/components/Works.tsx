@@ -2,13 +2,32 @@ import styles from './Works.module.scss';
 import { useState } from 'react';
 import ImageModal from './ImageModal';
 
-type FilterKey = 'all' | 'design' | 'photo';
+type FilterKey = 'all' | 'app' | 'design' | 'photo';
 
 export default function Works() {
     const [modalOpen, setModalOpen] = useState(false);
     const [modalSrc, setModalSrc] = useState('');
     const [modalAlt, setModalAlt] = useState('');
     const [filter, setFilter] = useState<FilterKey>('all');
+
+    const apps = [
+        {
+            image: '/portfolio/image/works/apps/doujin-treasure-map.png',
+            title: 'Doujin Treasure Map',
+            description: '同人イベントで訪問するサークル、頒布物、優先度、予算、訪問状況を管理するWebアプリ。',
+            tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+            demo: 'https://doujin-treasure-map.vercel.app/',
+            github: 'https://github.com/sora03pt/doujin-treasure-map',
+        },
+        {
+            image: '/portfolio/image/works/apps/wishlist.png',
+            title: 'Wishlist',
+            description: '画像、カテゴリ、欲しい度、価格などを登録し、購入状況とあわせて管理できるWishlistアプリ。',
+            tags: ['Next.js', 'Supabase', 'Storybook', 'Playwright'],
+            demo: 'https://my-web-app-lemon-ten.vercel.app/',
+            github: 'https://github.com/sora03pt/wishlist-app',
+        },
+    ];
 
     const designs = [
         {
@@ -63,7 +82,8 @@ export default function Works() {
     ];
 
     const filters: { key: FilterKey; label: string; count: number }[] = [
-        { key: 'all', label: 'All', count: designs.length + photos.length },
+        { key: 'all', label: 'All', count: apps.length + designs.length + photos.length },
+        { key: 'app', label: 'App', count: apps.length },
         { key: 'design', label: 'Banner', count: designs.length },
         { key: 'photo', label: 'Photo', count: photos.length },
     ];
@@ -73,7 +93,7 @@ export default function Works() {
             <div className={styles.header}>
                 <h2 className={styles.title}>Works</h2>
                 <p className={styles.description}>
-                    バナー、写真の制作物を掲載しています。
+                    Webアプリ、バナー、写真の制作物を掲載しています。
                 </p>
             </div>
 
@@ -91,6 +111,55 @@ export default function Works() {
                     </button>
                 ))}
             </div>
+
+            {(filter === 'all' || filter === 'app') && (
+                <div className={styles.categoryBlock}>
+                    <div className={styles.categoryHeader}>
+                        <h3 className={styles.sectionHeading}>Web App</h3>
+                        <p>実装したWebアプリ。</p>
+                    </div>
+                    <div className={styles.appGrid}>
+                        {apps.map((app) => (
+                            <article key={app.title} className={styles.card}>
+                                <div className={styles.mediaWrap}>
+                                    <img
+                                        src={app.image}
+                                        alt={`${app.title}のログイン画面`}
+                                        className={styles.projectImage}
+                                    />
+                                </div>
+                                <div className={styles.cardBody}>
+                                    <h4 className={styles.projectTitle}>{app.title}</h4>
+                                    <p className={styles.projectDescription}>{app.description}</p>
+                                    <div className={styles.tags} aria-label="使用技術">
+                                        {app.tags.map((tag) => (
+                                            <span key={tag}>{tag}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className={styles.linkButtons}>
+                                    <a
+                                        href={app.demo}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={styles.linkButton}
+                                    >
+                                        Demo
+                                    </a>
+                                    <a
+                                        href={app.github}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={styles.linkButton}
+                                    >
+                                        GitHub
+                                    </a>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             {(filter === 'all' || filter === 'design') && (
                 <div className={styles.categoryBlock}>

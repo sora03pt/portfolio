@@ -104,13 +104,6 @@
   line-height: 0.98;
 }
 
-.role {
-  margin: 0.9rem 0 0;
-  color: #202521;
-  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
-  font-weight: 700;
-}
-
 .subtitle {
   max-width: 34rem;
   margin: 1rem 0 0 auto;
@@ -186,10 +179,6 @@
 
   .title {
     font-size: clamp(2rem, 10vw, 3rem);
-  }
-
-  .role {
-    font-size: 1rem;
   }
 
   .subtitle {
